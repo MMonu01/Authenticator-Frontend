@@ -6,11 +6,9 @@ import { GetUserDetails } from "../actions/login-actions";
 
 const HomeScreen = (props) => {
   useEffect(() => {
-    getHomeData().then(() => {});
     props.Get_User_Details();
+    getHomeData().then(() => {});
   }, []);
-
-  console.log(props.logged_in_success);
 
   return <div style={{ height: "100vh", width: "100vw", background: "turquoise", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "50px", color: "white" }}>Home page</div>;
 };
